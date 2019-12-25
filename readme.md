@@ -1,7 +1,9 @@
 # Openshift RBAC lookup
 
 ## Building and Running
-Clone the repo, then run ```go build .```, this will create an executable oc-roles
+Clone the repo, then run inside the repo run 
+```go get -v -t -d ./... && go build .```
+ this will create an executable oc-roles
 
 ## Running
 There are two commands to run one to get all the users for a given role, and another to get all roles for a given user.
