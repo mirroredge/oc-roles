@@ -16,7 +16,8 @@ Run ```./oc-roles roles-user <rolename>```
 
 ## Output
 You can specify table or json output by using the -o or --output flag. Currently the supported values are ```table``` or ```json```
-```./co-roles -o json roles-user <rolename>```
+
+```./oc-roles -o json roles-user <rolename>```
 
 ## Note
 This was just a one day side project, it is not intended for production use 
