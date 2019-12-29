@@ -1,6 +1,12 @@
 # Openshift RBAC lookup
 
 ## Building and Running
+You can either download the binary from the release or clone and build
+## Download the binary
+Download the latest Release for your architecture [here](https://github.com/mirroredge/oc-roles/releases)
+## Build from source
+This project requires go modules to be turned on to build it.
+
 Clone the repo, then run inside the repo run 
 ```go get -v -t -d ./... && go build .```
  this will create an executable oc-roles
