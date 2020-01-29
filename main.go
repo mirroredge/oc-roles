@@ -1,7 +1,6 @@
 package main
 
 import (
-  "fmt"
   "github.com/urfave/cli/v2"
   "k8s.io/client-go/kubernetes"
   "log"
@@ -15,8 +14,8 @@ func main() {
       &cli.StringFlag{
         Name:  "output",
         Aliases: []string{"o"},
-        //Value: "table",
-        //Usage: "Output to display [json, table]",
+        Value: "table",
+        Usage: "Output to display [json, table]",
       },
     },
     Commands: []*cli.Command{
@@ -24,12 +23,7 @@ func main() {
         Name:    "user-roles",
         Usage:   "oc-roles User-roles [username] \n Gets the Roles for a User",
         ArgsUsage:   "[username]",
-        //Before: func(c *cli.Context) error {
-        //  client = k8sConfig()
-        //  return nil
-        //},
         Action:  func(c *cli.Context) error {
-          fmt.Println(c.String("output"))
           client = k8sConfig()
           if c.Args().Len() < 1 {
             return cli.Exit("Username not provided", 1)
